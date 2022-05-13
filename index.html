@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Compressor.js</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="form-input">
+
+            <label for="file-ip-1">Upload Image</label>
+            <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+
+        </div>
+        <div class="process">
+            <button id="process" onclick="appear();">Process</button>
+        </div>
+    </div>
+    <div class="table-container" id="table">
+        <table>
+            <tr>
+                <th>image name</th>
+            </tr>
+            <tr>
+                <th>image type
+                </th>
+                <th>image details
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    orignal
+                    <div class="preview">
+                        <img id="file-ip-1-preview">
+                    </div>
+                </th>
+                <th>size: <div id="orignal-size"></div>
+                </th>
+            </tr>
+            <tr>
+                <td id="wrapper">compressed<br>
+
+                </td>
+                <td>size: <div id="compressed-size">
+                </td>
+            </tr>
+            <tr>
+                <td id="croped">croped
+                    <canvas id="canvas" class="preview"></canvas>
+
+                </td>
+                <td>size: <div id="croped-size">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
