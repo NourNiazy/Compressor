@@ -7,17 +7,16 @@
           }
         }
         function appear(){
-             document.querySelector("#table").style.visibility = "visible";
-             var img = document.getElementById("file-ip-1-preview");
+          document.querySelector("#table").style.visibility = "visible";
+          var img = document.getElementById("file-ip-1-preview");
 
-            //Get size of img
-             var imgpath = document.getElementById("file-ip-1");
-             if (!imgpath.value == "") {
-               var img = imgpath.files[0].size;
-               var imgsize = img / 1024;
-               document.getElementById("orignal-size").innerHTML = imgsize;
-             }
-           
+          //Get size of orignal img
+          var imgpath = document.getElementById("file-ip-1");
+          if (!imgpath.value == "") {
+            var img = imgpath.files[0].size;
+            var imgsize = img / 1024;
+            document.getElementById("orignal-size").innerHTML = imgsize;
+          }
         }
 
 
@@ -44,7 +43,8 @@
        let new_image_url = context.canvas.toDataURL("image/jpeg", 90);
        let new_image = document.createElement("img");
        new_image.src = new_image_url;
-       document.getElementById("wrapper").appendChild(new_image);
+       document.getElementById("compressed").appendChild(new_image);
+       //Get size of compressed img
        document.getElementById("compressed-size").innerHTML =
          new_image_url.length / 1024;
      };
@@ -76,6 +76,7 @@
    let new_image = document.createElement("img");
    new_image.src = new_image_url;
    document.getElementById("croped").appendChild(new_image);
+   //Get size of croped img
    document.getElementById("croped-size").innerHTML =
      new_image_url.length / 1024;
  };
