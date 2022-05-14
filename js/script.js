@@ -75,7 +75,7 @@
      canvas.width,
      canvas.height
    );
-   let new_image_url = context.canvas.toDataURL("image/jpeg", 90);
+   let new_image_url = context.canvas.toDataURL("image/png", 90);
    let new_image = document.createElement("img");
    new_image.src = new_image_url;
    document.getElementById("croped").appendChild(new_image);
