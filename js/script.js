@@ -55,12 +55,15 @@
 //crop
  let crop = function (target) {
    var img = document.getElementById("file-ip-1-preview");
-   var WIDTH = img.clientWidth;
+   var WIDTH_C = img.clientWidth;
    let canvas = document.createElement("canvas");
-   let ratio = WIDTH / target.width;
-   canvas.width = WIDTH;
+   let ratio = WIDTH_C / target.width;
+   canvas.width = WIDTH_C;
    canvas.height = target.height * ratio;
    const context = canvas.getContext("2d");
+  //  context.fillStyle = "red";
+  //  context.fill();
+  //  context.beginPath();
    context.drawImage(
      img,
      canvas.width / 2,
